@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20150323094557) do
 
   create_table "posts", force: :cascade do |t|
-    t.text     "body"
-    t.string   "status",     default: "", null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.text     "body",       limit: 65535
+    t.string   "status",     limit: 255,   default: "", null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
 end
